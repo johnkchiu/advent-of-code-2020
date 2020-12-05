@@ -21,12 +21,25 @@ def find_col(ticket, min, max):
 
 
 max = 0
+seats = {}
 with open('input', 'r') as file:
   for line in file:
     row = find_row(line.strip()[:7], 0, 127)
     col = find_col(line.strip()[-3:], 0, 7)
     seat = row * 8 + col
     if seat > max: max = seat
+    seats[seat] = True
     print(f"ticket: {line.strip()}, row: {row}, col: {col}, seat: {seat}")
 
 print(max)
+
+for i in range(0, max):
+  if i in seats:
+    print('X ', end='')
+  else:
+    print(f"{i} ", end='')
+  if i % 4 == 0:
+    print(' ', end='')
+  if i % 8 == 0:
+    print('')
+
