@@ -14,18 +14,18 @@ def read_file(input):
   #       print(line)
   pass
 
+def part1(input):
+  pass
+
+def part2(input):
+  pass
+
 @click.command()
 @click.argument('input')
 def main(input):
     click.echo(f'Using input file: {input}')
     part1(input)
     part2(input)
-
-def part1(input):
-  pass
-
-def part2(input):
-  pass
 
 if __name__ == '__main__':
     main()
