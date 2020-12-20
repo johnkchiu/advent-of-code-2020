@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 
 import os
+from functools import reduce
 
 import click
-from functools import reduce
 
 
 def read_file(input):

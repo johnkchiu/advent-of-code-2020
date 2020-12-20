@@ -6,13 +6,13 @@ import os
 import click
 
 def read_file(input):
-  # lines = open(input,'r').read().splitlines()
-  # print(lines)
+  lines = open(input,'r').read().splitlines()
+  print(lines)
 
   # with open(input, 'r') as file:
   #     for line in file:
   #       print(line)
-  pass
+  return lines
 
 def part1(input):
   pass
